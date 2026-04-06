@@ -1,0 +1,294 @@
+/*******
+October Engineering LLC
+last edit:  02-22-2022;
+
+******/
+
+
+/*@media only screen and (max-width: 600px) {
+	.hero-info {
+		max-width: 500px;
+	}
+	.hero-image {
+		visibility: hidden;
+	}
+}
+*/
+
+body {
+	font-family: 'Roboto', sans-serif;
+	/*background-color: #e0e0e0;*/
+	background-color: #fff;
+	margin-left: 40px;
+}
+
+.hero {
+	background-image: url("../img/hero1_06.jpg"); /* prev hero1_18 */
+	width: 100%; 
+	height: 25rem;
+
+	background-repeat: no-repeat;
+	background-size:cover;
+	margin-top: 9rem;
+
+/*	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;*/
+}
+
+.hero-info {
+	/*display: flex;*/
+  background-color: #fff;
+  font-size: 2.5rem;
+}
+
+.nav-items {
+	display: flex;
+	
+}
+#hero-name {
+	font-size: 2.5rem;
+	margin: 0rem 2rem;
+}
+
+h1, h2 {
+	padding-top: 0px;
+}
+
+h3 {
+	/*margin-left: 80px;*/
+	background-color: #fff;
+	max-width: 300px;
+}
+
+.container-nav {
+	background-color: #e0e0e0;
+	display: flex;
+	justify-items: left;
+/*	grid-template-rows: 80px;
+	grid-template-columns: repeat(3,1fr);*/
+	/* margin-left: 80px; */
+	width: 100%;
+	padding: 2.5rem 2rem;
+	position: fixed;
+	top: 0;
+
+}
+
+.nav-items {
+	text-transform: uppercase;
+	font-size: 1.75rem;
+	justify-items: right;
+	padding-left: 3rem;
+	align-items: center;
+	
+}
+
+.logo {
+	max-width: 300px;
+	height: 50px;
+	/*margin-top: 15px;  bottom,top  left,right */
+	margin-left: 40px;
+	grid-column: 1 / span 7;
+}
+
+footer {
+	background-color: #e0e0e0;
+	padding-top: 2px;
+	padding-left: 5px;
+	height: 60px;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+section {
+	margin-left: 40px;
+	margin-top: 15px;
+}
+
+ul {
+	font-size: 1.25rem;
+}
+
+.oea-contact {
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer_copyright {
+	margin-top: 15px;
+	font-size: 1.2rem;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+a {
+	text-decoration: none;
+	/*color: black;*/
+	color: blue;
+}
+
+a:hover {
+	color: orangered;
+}
+
+a:active {
+	color:purple;
+}
+
+
+.avatar {
+	width: 240px;
+	border-radius: 10px;
+	margin: 40px 80px 40px 40px;
+}
+
+/* grid named areas */
+
+.hero {
+	grid-area: hero;
+}
+
+.services {
+	grid-area: services;
+}
+
+.projects {
+	grid-area: projects;
+	margin-top: 20px;
+}
+
+.experience {
+	margin-top: 20px;
+}
+
+
+.education {
+	grid-area: education;
+	background-color: #e0e0e0;
+}
+
+.registrations {
+	grid-area: registrations;
+	margin-top: 20px;
+}
+
+.contact {
+	grid-area: contact;
+}
+
+.mission {
+	grid-area: mission;
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: #e0e0e0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.services {
+	grid-area: services;
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: #e0e0e0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+
+.experiences {
+	grid-area: experiences;
+	background-color: #e0e0e0;
+	margin-top: 20px;
+}
+
+
+/* this is the default small screen */
+.wrapper {
+	margin-top: 2rem;
+	display:grid;
+	grid-template-areas:
+	"services"
+	"education"
+	"registrations"
+	"projects"
+	"experiences"
+	"mission"
+	"contact";
+	grid-gap: 0.5rem;
+	/* margin-left: 20px; */
+}
+
+/* this is the desktop view */
+@media (min-width: 800px) {
+    .wrapper {
+      grid-template-columns: 2fr 2fr;
+      grid-template-areas:
+      	"services				experiences"
+        "projects				experiences"
+				"education   		experiences"
+				"registrations 	experiences"
+				"mission				experiences"
+				"contact				experiences";    
+
+    }
+    /* .page-nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .page-nav h1 {
+        display:  flex;
+        justify-content: left;
+    } */
+  }
+
+
+.li_2 {
+	font-size: 1.2rem;
+}
+
+.project {
+	margin-top: 15px;
+}
+
+.p_name, .position_name {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding-right: 15px;
+}
+
+.p_location, .position_location {
+	font-family: 'Arial', sans-serif;
+	font-weight: normal;
+	font-size: 1.1rem;
+	padding-left: 10px;
+}
+.p_description, .position_description {
+	font-family: 'Arial';
+	font-weight: normal;
+	font-size: 1em;
+}
+
+.position_date, .position_company {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-style: 0.9em;
+	padding-left: 10px;
+}
+
+.p_date {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-style: 0.9em;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.p_sample {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-style: 1.2rem;
+	font-weight: bold;
+}
